@@ -9,6 +9,9 @@ init offset = -1
 ## Styles
 ################################################################################
 
+style button:
+    activate_sound "Static.ogg"
+
 style default:
     properties gui.text_properties()
     language gui.language

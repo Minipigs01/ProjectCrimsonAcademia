@@ -186,6 +186,12 @@ define gui.confirm_button_text_xalign = 0.5
 
 define gui.page_button_borders = Borders(15, 6, 15, 6)
 
+style quick_button:
+
+    properties gui.button_properties("quick_button")
+
+    activate_sound "Static.ogg"
+
 define gui.quick_button_borders = Borders(15, 6, 15, 0)
 define gui.quick_button_text_size = 21
 define gui.quick_button_text_idle_color = gui.idle_small_color
