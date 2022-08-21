@@ -1,12 +1,15 @@
+## Starters
 
 define e = Character("Mysterious Woman")
 define n = Character ("Story")
 
-image Phill = ("phill.png")
+image Juno = ("juno_1.png")
 
-image Thicc = ("thiccomniman.png")
+image BG1 = ("bg1.png")
 
 image Akuma = "akuma.png"
+
+## Introduction Defaults
 
 default yes = False
 
@@ -34,13 +37,15 @@ default yes2 = False
 
 default no2 = False
 
+##Start
+
 label start:
 
     play music "VSC.ogg"
 
-    scene bg room
+    scene BG1 
 
-    show Phill 
+    show Juno
 
     e "..."
 
@@ -64,7 +69,13 @@ label start:
 
 label choice:
 
+   
+
     play sound "Static.ogg"
+
+    hide Akuma 
+
+    show Juno
 
     menu: 
         e "Do you even remember what you've done...?"
@@ -249,7 +260,7 @@ label won:
 
 label choice_3b:
 
-    hide Phill
+    hide Juno
 
     e "A unforgivable murderer, how crude."
 
@@ -293,6 +304,7 @@ label fairness:
 
     e ""
     
+# All introduction ending segments
 label intro_end: 
 
     if liar and love and failed == True:
@@ -304,6 +316,8 @@ label intro_end:
         e "I think I know what you are..."
 
         play sound "Static.ogg"
+
+        hide Juno
 
         show Akuma
 
